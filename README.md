@@ -1,9 +1,11 @@
-[![MasterHead](https://1.bp.blogspot.com/-7A4WynwLsMw/XbBpCXG8fHI/AAAAAAAAMt4/uOa1bpLskYgrwGbllhSu2SDj_Mig8SXJQCLcBGAsYHQ/s1600/2000_600px.gif)](https://rishavchanda.io)
+[![MasterHead](https://www.linkpicture.com/q/1920x1080_v2.gif)](https://rishavchanda.io)
+
 <h1 align="center">Hi 👋, I'm Luser</h1>
 <h3 align="center">A passionate Software Developer</h3>
+
 <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
 
-<p align="left"> 
+<p align="left">
     <img src="https://komarev.com/ghpvc/?username=luser408&label=Profile%20views&color=0e75b6&style=flat" alt="luser408" /> 
 </p>
 
@@ -61,14 +63,33 @@
 
 ---
 
-<p align="center">
-    <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=luser408&show_icons=true&theme=dark&locale=en&layout=compact" alt="luser408" />
-</p>
+<h2 align="center">📊 My GitHub Stats</h2>
+<div align="center">
+    <img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&theme=react&hide_border=true&bg_color=0D1117&title_color=ffffff&icon_color=BB2AC4&text_color=ffffff&border_color=0c1a25" alt="luser408" />
+</div>
+<br />
+<div align="center">
+    <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&theme=dark&hide_border=true&stroke=0000&background=060A0CD0" alt="luser408" />
+</div>
+<br />
+<div align="center">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=luser408&show_icons=true&theme=dark&locale=en&layout=compact&hide_border=true&bg_color=0D1117&title_color=ffffff&icon_color=BB2AC4&text_color=ffffff&border_color=0c1a25" alt="luser408" />
+</div>
+
+---
+
+<h2 align="center">💻 Recent GitHub Activity</h2>
+<a href="https://github.com/luser408">
+ <img align="center" src="https://activity-graph.herokuapp.com/graph?username=luser408&theme=react-dark&bg_color=0D1117&color=ffffff&line=BB2AC4&point=ffffff&hide_border=true" alt="Luser's Activity Graph" />
+</a>
+
+---
+
+<div align="center">
+    <h3>🎨 GitHub Profile Views</h3>
+    <img src="https://komarev.com/ghpvc/?username=luser408&label=Profile%20views&color=0e75b6&style=flat" alt="luser408" /> 
+</div>
 
 <p align="center">
-    <img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&theme=dark&locale=en" alt="luser408" />
-</p>
-
-<p align="center">
-    <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&theme=dark" alt="luser408" />
+  <img src="https://media.giphy.com/media/3oEduLd8DEOsbVT6QE/giphy.gif" width="300" alt="Gif" />
 </p>
