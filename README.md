@@ -14,7 +14,7 @@
   
 - 📫 Reach me at **hamza128482@gmail.com**.
 
-- ⚡ Fun fact: **Luser. Just a Tech Enthusiast**
+- ⚡ Fun fact: **Luser. Just a Tech**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -70,12 +70,3 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luser408&layout=compact&theme=radical" alt="Top Languages" />
 </p>
 
-<!-- Animated Footer -->
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1000&color=FF1493&background=000000&center=true&vCenter=true&width=440&lines=Passionate+Developer+%7C+Tech+Enthusiast+%7C+Coder" alt="Typing SVG" />
-</p>
-
-<!-- Cool Footer GIF -->
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7aD5tv1ogNBtDhDi/giphy.gif" alt="Cool Developer" width="500"/>
-</p>
