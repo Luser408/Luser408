@@ -14,7 +14,7 @@
   
 - 📫 Reach me at **hamza128482@gmail.com**.
 
-- ⚡ Fun fact: **Luser.Just a Tech**
+- ⚡ Fun fact: **Luser. Just a Tech Enthusiast**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
