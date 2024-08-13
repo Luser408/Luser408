@@ -1,21 +1,21 @@
-[![MasterHead](https://1.bp.blogspot.com/-7A4WynwLsMw/XbBpCXG8fHI/AAAAAAAAMt4/uOa1bpLskYgrwGbllhSu2SDj_Mig8SXJQCLcBGAsYHQ/s1600/2000_600px.gif)](https://rishavchanda.io)
+[![MasterHead](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg)](https://rishavchanda.io)
 
 <h1 align="center">Hi 👋, I'm Luser408</h1>
-<h3 align="center">A passionate Software Developer</h3>
+<h3 align="center">A Passionate Software Developer</h3>
 
-<img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
+<img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1708816/screenshots/15637256/media/f9826f0af8a49462f048262a8502035b.gif">
 
 <p align="left"> 
-  <img src="https://komarev.com/ghpvc/?username=luser408&label=Profile%20views&color=0e75b6&style=flat" alt="luser408" /> 
+  <img src="https://komarev.com/ghpvc/?username=luser408&label=Profile%20views&color=ff69b4&style=plastic" alt="luser408" /> 
 </p>
 
 - 🌱 I’m currently learning **Flutter**
 
 - 💬 Ask me about **App Development, Web Development, AR**
 
-- 📫 How to reach me: **hamza128482@gmail.com**
+- 📫 How to reach me **hamza128482@gmail.com**
 
-- ⚡ Fun fact: **Luser - Just a Tech Enthusiast**
+- ⚡ Fun fact **Luser - Just a Tech Enthusiast**
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
@@ -23,10 +23,10 @@
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> 
   </a> 
   <a href="https://www.blender.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://download.blender.org/branding/community/blender_community_badge_white.svg" alt="blender" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/blender/blender-icon.svg" alt="blender" width="40" height="40"/> 
   </a> 
   <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg" alt="bootstrap" width="40" height="40"/> 
   </a> 
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> 
@@ -38,10 +38,10 @@
     <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="40" height="40"/> 
   </a> 
   <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg" alt="django" width="40" height="40"/> 
   </a> 
   <a href="https://expressjs.com" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" alt="express" width="40" height="40"/> 
   </a> 
   <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> 
     <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> 
@@ -68,10 +68,10 @@
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> 
   </a> 
   <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/mathworks/mathworks-icon.svg" alt="matlab" width="40" height="40"/> 
   </a> 
   <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="mongodb" width="40" height="40"/> 
   </a> 
   <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer"> 
     <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/> 
@@ -80,16 +80,16 @@
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> 
   </a> 
   <a href="https://nestjs.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg" alt="nestjs" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg" alt="nestjs" width="40" height="40"/> 
   </a> 
   <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg" alt="nextjs" width="40" height="40"/> 
   </a> 
   <a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="nodejs" width="40" height="40"/> 
   </a> 
   <a href="https://www.oracle.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/oracle/oracle-icon.svg" alt="oracle" width="40" height="40"/> 
   </a> 
   <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> 
@@ -118,13 +118,13 @@
 </p>
 
 <p>
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=luser408&show_icons=true&locale=en&layout=compact" alt="luser408" />
+  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=luser408&show_icons=true&locale=en&layout=compact&theme=radical" alt="luser408" />
+</p>
+
+<p>&nbsp;
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&locale=en&theme=radical" alt="luser408" />
 </p>
 
 <p>
-  &nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&locale=en" alt="luser408" />
-</p>
-
-<p>
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&" alt="luser408" />
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&theme=radical" alt="luser408" />
 </p>
