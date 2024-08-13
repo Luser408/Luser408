@@ -1,72 +1,24 @@
-<!-- Dark Themed GitHub Profile README -->
-[![MasterHead](https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif)](https://luser408.github.io)
+<h1 align="center">Hi 👋, I'm Hamza Khan</h1>
+<h3 align="center">I'm a Software Engineer specializing in web and app development with a focus on Flutter and Augmented Reality.</h3>
 
-<h1 align="center">Hi 👋, I'm Luser</h1>
-<h3 align="center">A Passionate Software Developer</h3>
+- 🔭 I’m currently working on **Flutter and Augmented Reality projects**
 
-<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
+- 🌱 I’m currently learning **Flutter and Augmented Reality**
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=luser408&label=Profile%20views&color=ff69b4&style=flat" alt="luser408" /> </p>
+- 💬 Ask me about **Web Development, App Development, Flutter, and Augmented Reality**
 
-- 🌱 I’m currently working on **Flutter** and **Web Development**.
-  
-- 💬 Ask me about **App Development, Web Development, AR**.
-  
-- 📫 Reach me at **hamza128482@gmail.com**.
-
-- ⚡ Fun fact: **Luser. Just a Tech**
+- 📫 How to reach me: **[hamza_khanjadoon@xyz.com](mailto:hamza_khanjadoon@xyz.com)**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-  <a href="https://www.linkedin.com/in/hamza-khan-8a6009230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-    <img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://www.instagram.com/hamza_khanjadoon?igshid=MWY3dDAwazUzaXFreA==" target="_blank">
-    <img align="center" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
-  </a>
-  <a href="https://medium.com/@hamza128482" target="_blank">
-    <img align="center" src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
-  </a>
-  <a href="https://x.com/Hamza_221B?t=_GrqVsz8bC4Nt04TX8FYRA&s=09" target="_blank">
-    <img align="center" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
-  </a>
+<a href="https://linkedin.com/in/hamza-khan-8a6009230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="hamza-khan-8a6009230" height="30" width="40" /></a>
+<a href="https://x.com/Hamza_221B?t=_GrqVsz8bC4Nt04TX8FYRA&s=09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter-alt.svg" alt="Hamza_221B" height="30" width="40" /></a>
+<a href="https://www.instagram.com/hamza_khanjadoon?igsh=MWY3dDAwazUzaXFreA==" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="hamza_khanjadoon" height="30" width="40" /></a>
+<a href="https://medium.com/@hamza128482" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@hamza128482" height="30" width="40" /></a>
+<a href="https://open.spotify.com/user/31to6svxd4pv6576zycsasyu5twq?si=iI_wLbiVS4q_NqPBsKCk3Q&utm_source=copy-link" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/spotify.svg" alt="Hamza Khan Spotify" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
-  <a href="https://developer.android.com" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/android-os.png" alt="android" width="40" height="40"/> 
-  </a> 
-  <a href="https://flutter.dev" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="flutter" width="40" height="40"/> 
-  </a> 
-  <a href="https://reactjs.org" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="react" width="40" height="40"/> 
-  </a> 
-  <a href="https://nodejs.org" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="nodejs" width="40" height="40"/> 
-  </a>
-  <a href="https://firebase.google.com/" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="firebase" width="40" height="40"/> 
-  </a> 
-  <a href="https://www.w3schools.com/html/" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="html5" width="40" height="40"/> 
-  </a>
-  <a href="https://www.w3schools.com/css/" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/css3.png" alt="css3" width="40" height="40"/> 
-  </a>
-  <a href="https://www.javascript.com/" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="javascript" width="40" height="40"/> 
-  </a>
-  <a href="https://git-scm.com/" target="_blank"> 
-    <img src="https://img.icons8.com/color/48/000000/git.png" alt="git" width="40" height="40"/> 
-  </a> 
+  <!-- Add your preferred tools and languages here -->
 </p>
-
-<h3 align="left">GitHub Stats:</h3>
-<p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&theme=radical" alt="GitHub Streak Stats" />
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luser408&layout=compact&theme=radical" alt="Top Languages" />
-</p>
-
