@@ -1,7 +1,7 @@
-[![MasterHead](https://mir-s3-cdn-cf.behance.net/project_modules/fs/54b6c068097599.5b50bca476b9b.gif)](https://rishavchanda.io)
-<h1 align="center">Hi 👋, I'm Hamza Khan</h1>
-<h3 align="center">A Passionate Software Developer & Tech Enthusiast</h3>
-<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
+[![MasterHead](https://media.giphy.com/media/jTNG3RF6EwbkpD4LZx/giphy.gif)](https://rishavchanda.io)
+<h1 align="center">Hey 👋, I'm Hamza Khan</h1>
+<h3 align="center">A Passionate Software Developer & Tech Explorer 🚀</h3>
+<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGI0ZGVlYjAzNTZkMTA1NzJkNTcyNDA4Y2JjNTAxNWRjOTJlMmUwYSZjdD1z/jD4DwBtqPXRXa/giphy.gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=luser408&label=Profile%20views&color=0e75b6&style=flat" alt="luser408" /> </p>
 
@@ -10,7 +10,7 @@
 - 🌱 I’m currently learning **Flutter** and **Augmented Reality**
 - 💬 Ask me about **App Development, Web Development, AR**
 - 📫 How to reach me: **hamza128482@gmail.com**
-- ⚡ Fun fact: **I’m passionate about exploring cutting-edge technologies!**
+- ⚡ Fun fact: **I love merging creativity with code to craft cool projects!**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -46,8 +46,8 @@
 </a> 
 </p>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=luser408&show_icons=true&locale=en&layout=compact" alt="luser408" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=luser408&show_icons=true&locale=en&layout=compact&theme=radical" alt="luser408" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&locale=en" alt="luser408" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&locale=en&theme=radical" alt="luser408" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&" alt="luser408" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&theme=radical" alt="luser408" /></p>
