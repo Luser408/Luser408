@@ -1,0 +1,24 @@
+name: Update Profile README
+
+on:
+  schedule:
+    - cron: "0 5 * * *"  # every day at 8 AM Riyadh (UTC+3)
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - name: Run bot
+        run: |
+          python bot.py
+          git config user.name "LuserBot"
+          git config user.email "bot@github.com"
+          git add README.md
+          git commit -m "🤖 Auto-update profile stats" || echo "No changes"
+          git push
