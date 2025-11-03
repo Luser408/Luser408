@@ -48,4 +48,8 @@
 <h3 align="left">📊 Live GitHub Stats:</h3>
 
 <!--STATS_START-->
+🗓️ Updated on: **2025-11-03 09:02 UTC**
+
+👥 Followers: **13**
+📦 Public Repos: **28**
 <!--STATS_END-->
