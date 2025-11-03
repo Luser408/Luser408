@@ -13,34 +13,36 @@ def get_github_stats():
     public_repos = response.get("public_repos", 0)
     return followers, public_repos
 
-# Fetch most recently starred repo
-def get_recent_star():
-    url = f"https://api.github.com/users/{USERNAME}/starred?per_page=1"
+# Fetch last 3 recently starred repos
+def get_recent_stars(limit=3):
+    url = f"https://api.github.com/users/{USERNAME}/starred?per_page={limit}"
     response = requests.get(url).json()
     if isinstance(response, list) and len(response) > 0:
-        repo = response[0]
-        name = repo.get("full_name", "Unknown")
-        url = repo.get("html_url", "#")
-        return f"[{name}]({url})"
+        stars = []
+        for repo in response[:limit]:
+            name = repo.get("full_name", "Unknown")
+            html_url = repo.get("html_url", "#")
+            stars.append(f"⭐ [{name}]({html_url})")
+        return "\n".join(stars)
     return "No recent stars"
 
-# Update README
+# Update README content
 def update_readme():
     followers, public_repos = get_github_stats()
-    recent_star = get_recent_star()
+    recent_stars = get_recent_stars()
     date = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
     with open(README_FILE, "r", encoding="utf-8") as f:
         content = f.read()
 
-    start_tag = "<!--START_STATS-->"
-    end_tag = "<!--END_STATS-->"
+    start_tag = "<!--STATS_START-->"
+    end_tag = "<!--STATS_END-->"
     new_section = (
         f"{start_tag}\n"
         f"🕒 Last Updated: **{date}**\n\n"
         f"👥 Followers: **{followers}**\n\n"
         f"📦 Public Repos: **{public_repos}**\n\n"
-        f"⭐ Recently Starred: {recent_star}\n"
+        f"✨ Recently Starred Repositories:\n{recent_stars}\n"
         f"{end_tag}"
     )
 
