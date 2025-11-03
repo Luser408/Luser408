@@ -48,14 +48,14 @@
 <h3 align="left">📊 Live GitHub Stats:</h3>
 
 <!--STATS_START-->
+🕒 Last Updated: **2025-11-03 09:24 UTC**
 
-📊 **Live GitHub Stats (Auto Updated Daily)**
+👥 Followers: **13**
 
-🗓️ Last Updated: 2025-11-03 09:15 UTC
-⭐ Total Stars: 23
-👥 Followers: 13
-🍴 Public Repos: 28
-📁 Latest Repo: Luser408
-💬 Last Commit: "Refactor GitHub data fetching and README update"
+📦 Public Repos: **28**
 
+✨ Recently Starred Repositories:
+⭐ [Luser408/Luser408](https://github.com/Luser408/Luser408)
+⭐ [shahradelahi/zod-request](https://github.com/shahradelahi/zod-request)
+⭐ [shahradelahi/sha256](https://github.com/shahradelahi/sha256)
 <!--STATS_END-->
