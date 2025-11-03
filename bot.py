@@ -1,62 +1,58 @@
 import requests
 import datetime
+import os
 
 USERNAME = "Luser408"
 README_FILE = "README.md"
 
-def fetch_github_data(username):
-    user_data = requests.get(f"https://api.github.com/users/{username}").json()
-    repos_data = requests.get(f"https://api.github.com/users/{username}/repos?sort=updated").json()
+# Fetch GitHub user stats
+def get_github_stats():
+    url = f"https://api.github.com/users/{USERNAME}"
+    response = requests.get(url).json()
+    followers = response.get("followers", 0)
+    public_repos = response.get("public_repos", 0)
+    return followers, public_repos
 
-    total_stars = sum(repo.get("stargazers_count", 0) for repo in repos_data)
-    latest_repo = repos_data[0]["name"] if repos_data else "N/A"
-    latest_commit_msg = "N/A"
+# Fetch most recently starred repo
+def get_recent_star():
+    url = f"https://api.github.com/users/{USERNAME}/starred?per_page=1"
+    response = requests.get(url).json()
+    if isinstance(response, list) and len(response) > 0:
+        repo = response[0]
+        name = repo.get("full_name", "Unknown")
+        url = repo.get("html_url", "#")
+        return f"[{name}]({url})"
+    return "No recent stars"
 
-    if repos_data:
-        repo_name = repos_data[0]["name"]
-        commits = requests.get(f"https://api.github.com/repos/{username}/{repo_name}/commits").json()
-        if isinstance(commits, list) and commits:
-            latest_commit_msg = commits[0]["commit"]["message"]
+# Update README
+def update_readme():
+    followers, public_repos = get_github_stats()
+    recent_star = get_recent_star()
+    date = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
-    return {
-        "followers": user_data.get("followers", 0),
-        "public_repos": user_data.get("public_repos", 0),
-        "total_stars": total_stars,
-        "latest_repo": latest_repo,
-        "latest_commit_msg": latest_commit_msg,
-    }
-
-def update_readme(stats):
     with open(README_FILE, "r", encoding="utf-8") as f:
         content = f.read()
 
-    start_marker = "<!--STATS_START-->"
-    end_marker = "<!--STATS_END-->"
-
-    stats_md = f"""
-📊 **Live GitHub Stats (Auto Updated Daily)**
-
-🗓️ Last Updated: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}
-⭐ Total Stars: {stats['total_stars']}
-👥 Followers: {stats['followers']}
-🍴 Public Repos: {stats['public_repos']}
-📁 Latest Repo: {stats['latest_repo']}
-💬 Last Commit: "{stats['latest_commit_msg']}"
-"""
-
-    new_content = (
-        content.split(start_marker)[0]
-        + start_marker
-        + "\n"
-        + stats_md
-        + "\n"
-        + end_marker
-        + content.split(end_marker)[1]
+    start_tag = "<!--START_STATS-->"
+    end_tag = "<!--END_STATS-->"
+    new_section = (
+        f"{start_tag}\n"
+        f"🕒 Last Updated: **{date}**\n\n"
+        f"👥 Followers: **{followers}**\n\n"
+        f"📦 Public Repos: **{public_repos}**\n\n"
+        f"⭐ Recently Starred: {recent_star}\n"
+        f"{end_tag}"
     )
 
+    if start_tag in content and end_tag in content:
+        start_idx = content.index(start_tag)
+        end_idx = content.index(end_tag) + len(end_tag)
+        updated_content = content[:start_idx] + new_section + content[end_idx:]
+    else:
+        updated_content = content + "\n\n" + new_section
+
     with open(README_FILE, "w", encoding="utf-8") as f:
-        f.write(new_content)
+        f.write(updated_content)
 
 if __name__ == "__main__":
-    stats = fetch_github_data(USERNAME)
-    update_readme(stats)
+    update_readme()
