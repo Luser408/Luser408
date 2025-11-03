@@ -48,8 +48,14 @@
 <h3 align="left">📊 Live GitHub Stats:</h3>
 
 <!--STATS_START-->
-🗓️ Updated on: **2025-11-03 09:02 UTC**
 
-👥 Followers: **13**
-📦 Public Repos: **28**
+📊 **Live GitHub Stats (Auto Updated Daily)**
+
+🗓️ Last Updated: 2025-11-03 09:15 UTC
+⭐ Total Stars: 23
+👥 Followers: 13
+🍴 Public Repos: 28
+📁 Latest Repo: Luser408
+💬 Last Commit: "Refactor GitHub data fetching and README update"
+
 <!--STATS_END-->
