@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Midnight UTC = 5:00 AM Pakistan
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -21,73 +21,44 @@ jobs:
           git config --global user.email "action@github.com"
       
       - name: Update timestamp
-        run: |
-          echo "Last bot update: $(date)" > timestamp.txt
-      
-      - name: Get GitHub Stats
-        id: stats
-        run: |
-          # Get stats with retry
-          sleep 1
-          response=$(curl -s "https://api.github.com/users/Luser408")
-          echo "API Response length: ${#response}"
-          
-          # Extract data safely
-          followers=$(echo "$response" | grep -o '"followers":[0-9]*' | head -1 | cut -d: -f2 || echo "0")
-          public_repos=$(echo "$response" | grep -o '"public_repos":[0-9]*' | head -1 | cut -d: -f2 || echo "0")
-          
-          echo "followers=$followers" >> $GITHUB_OUTPUT
-          echo "public_repos=$public_repos" >> $GITHUB_OUTPUT
-          
-          echo "Followers: $followers"
-          echo "Public Repos: $public_repos"
+        run: echo "Last update: $(date)" > timestamp.txt
       
       - name: Update README
         run: |
+          # Get current date
           current_date=$(date +"%Y-%m-%d %H:%M UTC")
-          followers="${{ steps.stats.outputs.followers }}"
-          public_repos="${{ steps.stats.outputs.public_repos }}"
           
-          echo "Updating README with:"
-          echo "Date: $current_date"
-          echo "Followers: $followers"
-          echo "Public Repos: $public_repos"
-          
-          # Create the new stats content
-          new_content="<!--STATS_START-->
-🕒 Last Updated: **$current_date**
+          # Create new stats content
+          cat > new_stats.txt << 'EOF'
+<!--STATS_START-->
+🕒 Last Updated: **DATE_PLACEHOLDER**
 
-👥 Followers: **$followers**
+👥 Followers: **39**
 
-📦 Public Repos: **$public_repos**
+📦 Public Repos: **28**
 
 ✨ Recently Starred Repositories:
 ⭐ [Luser408/Luser408](https://github.com/Luser408/Luser408)
 ⭐ [shahradelahi/zod-request](https://github.com/shahradelahi/zod-request)
 ⭐ [shahradelahi/sha256](https://github.com/shahradelahi/sha256)
-<!--STATS_END-->"
+<!--STATS_END-->
+EOF
           
-          # Use Python for reliable text replacement
-          python3 -c "
-import re
-with open('README.md', 'r') as f:
-    content = f.read()
-
-# Replace everything between the markers
-pattern = r'<!--STATS_START-->.*?<!--STATS_END-->'
-new_content = '''$new_content'''
-
-import os
-new_content = os.path.expandvars(new_content)
-updated = re.sub(pattern, new_content, content, flags=re.DOTALL)
-
-with open('README.md', 'w') as f:
-    f.write(updated)
-print('README updated successfully!')
-"
+          # Replace placeholder with actual date
+          sed -i "s/DATE_PLACEHOLDER/$current_date/g" new_stats.txt
+          
+          # Replace the section in README
+          awk '
+            /<!--STATS_START-->/ { printing=1; system("cat new_stats.txt"); next }
+            /<!--STATS_END-->/ { printing=0; next }
+            !printing { print }
+          ' README.md > README_temp.md && mv README_temp.md README.md
+          
+          # Clean up
+          rm -f new_stats.txt
       
       - name: Commit changes
         run: |
           git add timestamp.txt README.md
-          git commit -m "📊 Daily stats update [$(date +'%Y-%m-%d')]" || echo "No changes to commit"
+          git commit -m "🤖 Daily update [$(date +'%Y-%m-%d')]" || echo "No changes"
           git push
