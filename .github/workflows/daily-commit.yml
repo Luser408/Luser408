@@ -2,9 +2,9 @@ name: Daily Commit
 
 on:
   schedule:
-    # Runs every day at 00:00 UTC (midnight)
+    # Runs every day at 00:00 UTC (midnight) = 5:00 AM Pakistan
     - cron: '0 0 * * *'
-  workflow_dispatch:  # Allows manual run
+  workflow_dispatch:
 
 jobs:
   daily-commit:
@@ -13,60 +13,29 @@ jobs:
       contents: write
     
     steps:
-      # Step 1: Get the code
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       
-      # Step 2: Setup git
       - name: Setup Git
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "action@github.com"
       
-      # Step 3: Update timestamp only
       - name: Update timestamp
         run: |
-          echo "Last updated: $(date)" > timestamp.txt
+          # Create simple timestamp
+          echo "Bot update: $(date)" > timestamp.txt
       
-      # Step 4: Update only the stats section in README
-      - name: Update README Stats
+      - name: Simple README update
         run: |
-          # Get current date in clean format
+          # Just update the date line in README
           current_date=$(date +"%Y-%m-%d %H:%M UTC")
-          
-          # Get followers count using GitHub API
-          followers=$(curl -s "https://api.github.com/users/Luser408" | grep -o '"followers":[0-9]*' | cut -d: -f2)
-          
-          # Get public repos count
-          public_repos=$(curl -s "https://api.github.com/users/Luser408" | grep -o '"public_repos":[0-9]*' | cut -d: -f2)
-          
-          # Create new stats section
-          new_stats="<!--STATS_START-->
-🕒 Last Updated: **$current_date**
-
-👥 Followers: **$followers**
-
-📦 Public Repos: **$public_repos**
-
-✨ Recently Starred Repositories:
-⭐ [Luser408/Luser408](https://github.com/Luser408/Luser408)
-⭐ [shahradelahi/zod-request](https://github.com/shahradelahi/zod-request)
-⭐ [shahradelahi/sha256](https://github.com/shahradelahi/sha256)
-<!--STATS_END-->"
-          
-          # Replace the stats section in README
-          awk -v new_stats="$new_stats" '
-            /<!--STATS_START-->/ {print new_stats; skip=1}
-            /<!--STATS_END-->/ {skip=0; next}
-            skip {next}
-            {print}
-          ' README.md > README_temp.md && mv README_temp.md README.md
+          sed -i "s|🕒 Last Updated: \*\*.*\*\*|🕒 Last Updated: **$current_date**|" README.md
       
-      # Step 5: Commit and push
-      - name: Commit and push
+      - name: Commit changes
         run: |
           git add timestamp.txt README.md
-          git commit -m "🤖 Daily update: stats refresh [$(date +'%Y-%m-%d')]" || echo "No changes to commit"
+          git commit -m "🤖 Daily auto-commit [$(date +'%Y-%m-%d')]" || echo "No changes"
           git push
