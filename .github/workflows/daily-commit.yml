@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # Midnight UTC = 5:00 AM Pakistan
   workflow_dispatch:
 
 jobs:
@@ -21,24 +21,40 @@ jobs:
           git config --global user.email "action@github.com"
       
       - name: Update timestamp
-        run: echo "Bot update: $(date)" > timestamp.txt
-      
-      - name: Update README Stats
         run: |
-          # Get current date
+          echo "Last bot update: $(date)" > timestamp.txt
+      
+      - name: Get GitHub Stats
+        id: stats
+        run: |
+          # Get stats with retry
+          sleep 1
+          response=$(curl -s "https://api.github.com/users/Luser408")
+          echo "API Response length: ${#response}"
+          
+          # Extract data safely
+          followers=$(echo "$response" | grep -o '"followers":[0-9]*' | head -1 | cut -d: -f2 || echo "0")
+          public_repos=$(echo "$response" | grep -o '"public_repos":[0-9]*' | head -1 | cut -d: -f2 || echo "0")
+          
+          echo "followers=$followers" >> $GITHUB_OUTPUT
+          echo "public_repos=$public_repos" >> $GITHUB_OUTPUT
+          
+          echo "Followers: $followers"
+          echo "Public Repos: $public_repos"
+      
+      - name: Update README
+        run: |
           current_date=$(date +"%Y-%m-%d %H:%M UTC")
+          followers="${{ steps.stats.outputs.followers }}"
+          public_repos="${{ steps.stats.outputs.public_repos }}"
           
-          # Get GitHub stats
-          stats=$(curl -s "https://api.github.com/users/Luser408")
-          followers=$(echo "$stats" | grep -o '"followers":[0-9]*' | cut -d: -f2)
-          public_repos=$(echo "$stats" | grep -o '"public_repos":[0-9]*' | cut -d: -f2)
-          
+          echo "Updating README with:"
           echo "Date: $current_date"
           echo "Followers: $followers"
           echo "Public Repos: $public_repos"
           
-          # Create new stats block
-          new_stats="<!--STATS_START-->
+          # Create the new stats content
+          new_content="<!--STATS_START-->
 🕒 Last Updated: **$current_date**
 
 👥 Followers: **$followers**
@@ -51,23 +67,17 @@ jobs:
 ⭐ [shahradelahi/sha256](https://github.com/shahradelahi/sha256)
 <!--STATS_END-->"
           
-          # Replace entire stats block
-          awk -v new_stats="$new_stats" '
-            BEGIN {replacing=0}
-            /<!--STATS_START-->/ {
-              print new_stats
-              replacing=1
-              next
-            }
-            /<!--STATS_END-->/ {
-              replacing=0
-              next
-            }
-            replacing==0 {print}
-          ' README.md > README_temp.md && mv README_temp.md README.md
+          # Read the entire README
+          content=$(cat README.md)
+          
+          # Replace the stats section using simple pattern matching
+          # Find everything between <!--STATS_START--> and <!--STATS_END-->
+          echo "${content//'<!--STATS_START-->'*'<!--STATS_END-->'/$new_content}" > README.md
+          
+          echo "README updated successfully!"
       
       - name: Commit changes
         run: |
           git add timestamp.txt README.md
-          git commit -m "📊 Daily stats update [$(date +'%Y-%m-%d')]" || echo "No changes"
+          git diff --quiet && git diff --staged --quiet || git commit -m "📊 Daily stats update [$(date +'%Y-%m-%d')]"
           git push
