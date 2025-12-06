@@ -1,0 +1,20 @@
+name: Test
+
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Debug info
+        run: |
+          echo "Current folder: $(pwd)"
+          echo "Files in workflows folder:"
+          ls -la .github/workflows/
+          echo "---"
+          echo "README content around date:"
+          grep -n "Last Updated" README.md
