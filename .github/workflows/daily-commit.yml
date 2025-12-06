@@ -12,53 +12,21 @@ jobs:
       contents: write
     
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       
-      - name: Setup Git
+      - name: Update files
         run: |
-          git config --global user.name "GitHub Action Bot"
-          git config --global user.email "action@github.com"
-      
-      - name: Update timestamp
-        run: echo "Last update: $(date)" > timestamp.txt
-      
-      - name: Update README
-        run: |
-          # Get current date
+          # Update timestamp
+          date > timestamp.txt
+          
+          # Update date in README (simple sed)
           current_date=$(date +"%Y-%m-%d %H:%M UTC")
-          
-          # Create new stats content
-          cat > new_stats.txt << 'EOF'
-<!--STATS_START-->
-🕒 Last Updated: **DATE_PLACEHOLDER**
-
-👥 Followers: **39**
-
-📦 Public Repos: **28**
-
-✨ Recently Starred Repositories:
-⭐ [Luser408/Luser408](https://github.com/Luser408/Luser408)
-⭐ [shahradelahi/zod-request](https://github.com/shahradelahi/zod-request)
-⭐ [shahradelahi/sha256](https://github.com/shahradelahi/sha256)
-<!--STATS_END-->
-EOF
-          
-          # Replace placeholder with actual date
-          sed -i "s/DATE_PLACEHOLDER/$current_date/g" new_stats.txt
-          
-          # Replace the section in README
-          awk '
-            /<!--STATS_START-->/ { printing=1; system("cat new_stats.txt"); next }
-            /<!--STATS_END-->/ { printing=0; next }
-            !printing { print }
-          ' README.md > README_temp.md && mv README_temp.md README.md
-          
-          # Clean up
-          rm -f new_stats.txt
+          sed -i "s|Last Updated: \*\*.*\*\*|Last Updated: **$current_date**|" README.md
       
-      - name: Commit changes
+      - name: Commit
         run: |
-          git add timestamp.txt README.md
-          git commit -m "🤖 Daily update [$(date +'%Y-%m-%d')]" || echo "No changes"
+          git config user.name "GitHub Bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "📅 Daily update" || exit 0
           git push
