@@ -1,73 +1,64 @@
-name: Daily Commit
+[![MasterHead](https://cdn.dribbble.com/users/1059583/screenshots/4171367/coding-freak.gif)](https://github.com/Luser408)
 
-on:
-  schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+<h1 align="center">Hi 👋, I'm Luser408</h1>
 
-jobs:
-  daily-commit:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      
-      - name: Setup Git
-        run: |
-          git config --global user.name "GitHub Action Bot"
-          git config --global user.email "action@github.com"
-      
-      - name: Update timestamp
-        run: echo "Bot update: $(date)" > timestamp.txt
-      
-      - name: Update README Stats
-        run: |
-          # Get current date
-          current_date=$(date +"%Y-%m-%d %H:%M UTC")
-          
-          # Get GitHub stats
-          stats=$(curl -s "https://api.github.com/users/Luser408")
-          followers=$(echo "$stats" | grep -o '"followers":[0-9]*' | cut -d: -f2)
-          public_repos=$(echo "$stats" | grep -o '"public_repos":[0-9]*' | cut -d: -f2)
-          
-          echo "Date: $current_date"
-          echo "Followers: $followers"
-          echo "Public Repos: $public_repos"
-          
-          # Create new stats block
-          new_stats="<!--STATS_START-->
-🕒 Last Updated: **$current_date**
+<h3 align="center">Crafting the future, one line at a time – Passionate Software Developer 🚀</h3>
 
-👥 Followers: **$followers**
+<img align="right" alt="App Developer" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
-📦 Public Repos: **$public_repos**
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=luser408&label=Profile%20views&color=0e75b6&style=flat" alt="luser408" /> </p>
+
+<p align="left">
+<a href="https://x.com/Hamza_221B?t=_GrqVsz8bC4Nt04TX8FYRA&s=09" target="blank"><img src="https://img.shields.io/twitter/follow/Hamza_221B?logo=twitter&style=for-the-badge" alt="Hamza_221B" /></a>
+</p>
+
+- 🌱 I’m currently learning **Flutter**
+
+- 💬 Ask me about **App Development, Web Development, AR**
+
+- 📫 Reach me at **hamza128482@gmail.com**
+
+- ⚡ Fun fact: **Luser.Just a Tech**
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://x.com/Hamza_221B?t=_GrqVsz8bC4Nt04TX8FYRA&s=09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" /></a>
+<a href="https://www.instagram.com/hamza_khanjadoon?igshid=MWY3dDAwazUzaxfreA==" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="40" /></a>
+<a href="https://medium.com/@hamza128482" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="Medium" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/hamza-khan-8a6009230" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" /></a>
+</p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left">
+<a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a>
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
+<a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a>
+<a href="https://dart.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="40" height="40"/> </a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
+<a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
+<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a>
+</p>
+
+<h3 align="left">GitHub Stats:</h3>
+<p align="left">
+  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=luser408&show_icons=true&locale=en&layout=compact&theme=vision-friendly-dark" alt="Top Languages" />
+</p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=luser408&show_icons=true&locale=en&theme=vision-friendly-dark" alt="GitHub Stats" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=luser408&theme=vision-friendly-dark" alt="GitHub Streak" /></p>
+
+<h3 align="left">📊 Live GitHub Stats:</h3>
+
+<!--STATS_START-->
+🕒 Last Updated: **2025-12-06 05:20 UTC**
+
+👥 Followers: **39**
+
+📦 Public Repos: **28**
 
 ✨ Recently Starred Repositories:
 ⭐ [Luser408/Luser408](https://github.com/Luser408/Luser408)
 ⭐ [shahradelahi/zod-request](https://github.com/shahradelahi/zod-request)
 ⭐ [shahradelahi/sha256](https://github.com/shahradelahi/sha256)
-<!--STATS_END-->"
-          
-          # Replace entire stats block
-          awk -v new_stats="$new_stats" '
-            BEGIN {replacing=0}
-            /<!--STATS_START-->/ {
-              print new_stats
-              replacing=1
-              next
-            }
-            /<!--STATS_END-->/ {
-              replacing=0
-              next
-            }
-            replacing==0 {print}
-          ' README.md > README_temp.md && mv README_temp.md README.md
-      
-      - name: Commit changes
-        run: |
-          git add timestamp.txt README.md
-          git commit -m "📊 Daily stats update [$(date +'%Y-%m-%d')]" || echo "No changes"
-          git push
+<!--STATS_END-->
