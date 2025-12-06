@@ -37,7 +37,7 @@ jobs:
           current_date=$(date +"%Y-%m-%d %H:%M UTC")
           
           # Simple sed command to update date
-          sed -i "s|🕒 Last Updated: \*\*.*\*\*|🕒 Last Updated: **$current_date**|" README.md
+          sed -i "s|🕒 Last Updated: \*\*.*\*\*|🕒 Last Updated: **2025-12-06 22:34 UTC**|" README.md
       
       # Step 5: Commit and push
       - name: Commit and push
