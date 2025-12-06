@@ -67,17 +67,27 @@ jobs:
 ⭐ [shahradelahi/sha256](https://github.com/shahradelahi/sha256)
 <!--STATS_END-->"
           
-          # Read the entire README
-          content=$(cat README.md)
-          
-          # Replace the stats section using simple pattern matching
-          # Find everything between <!--STATS_START--> and <!--STATS_END-->
-          echo "${content//'<!--STATS_START-->'*'<!--STATS_END-->'/$new_content}" > README.md
-          
-          echo "README updated successfully!"
+          # Use Python for reliable text replacement
+          python3 -c "
+import re
+with open('README.md', 'r') as f:
+    content = f.read()
+
+# Replace everything between the markers
+pattern = r'<!--STATS_START-->.*?<!--STATS_END-->'
+new_content = '''$new_content'''
+
+import os
+new_content = os.path.expandvars(new_content)
+updated = re.sub(pattern, new_content, content, flags=re.DOTALL)
+
+with open('README.md', 'w') as f:
+    f.write(updated)
+print('README updated successfully!')
+"
       
       - name: Commit changes
         run: |
           git add timestamp.txt README.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "📊 Daily stats update [$(date +'%Y-%m-%d')]"
+          git commit -m "📊 Daily stats update [$(date +'%Y-%m-%d')]" || echo "No changes to commit"
           git push
