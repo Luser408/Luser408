@@ -2,26 +2,24 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight
-  workflow_dispatch: # Allows you to run it manually to test
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
+# THIS IS THE MISSING PART:
 permissions:
   contents: write
 
 jobs:
-  build:
+  commit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Update timestamp
-        run: date > timestamp.txt
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-      - name: Commit and Push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add timestamp.txt
-          git commit -m "📅 Daily update" || exit 0
-          git push
+      - name: Run python bot.py
+        run: python bot.py
