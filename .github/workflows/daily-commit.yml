@@ -2,8 +2,8 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
+  workflow_dispatch: # Allows you to run it manually
 
 permissions:
   contents: write
@@ -21,8 +21,8 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Luser408"
+          git config --global user.email "hamza128482@gmail.com"
           git add timestamp.txt
           git commit -m "🤖 Daily auto-commit $(date)" || exit 0
           git push
