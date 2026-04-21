@@ -15,21 +15,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+      - name: Update timestamp
+        run: |
+          echo "Last bot run: $(date)" > timestamp.txt
 
-      - name: Configure Git
+      - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Run Python Bot
-        run: python bot.py
-
-      - name: Push Changes
-        run: |
-          git add .
+          git add timestamp.txt
           git commit -m "🤖 Daily auto-commit $(date)" || exit 0
           git push
